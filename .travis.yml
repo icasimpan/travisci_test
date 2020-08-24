@@ -6,7 +6,7 @@ jobs:
       script: ./test 2
 
     - stage: D8_Core_Update
-      if: branch = update
+      if: branch = master
         - echo "test: core update"
       #env: TRAVIS_EVENT_TYPE=cron
       #  - echo "From D8_Core_Update"
