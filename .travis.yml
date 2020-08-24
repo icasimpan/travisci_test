@@ -11,5 +11,7 @@ jobs:
       #env: TRAVIS_EVENT_TYPE=cron
       #  - echo "From D8_Core_Update"
 
+    - stage: pre-deploy
+      script: ./deploy 0
     - stage: deploy
-      script: ./deploy
+      script: ./deploy 1
