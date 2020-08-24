@@ -8,8 +8,8 @@ jobs:
     - stage: D8_Core_Update
       if: branch = update
         - echo "test: core update"
-      #env: TRAVIS_EVENT_TYPE=cron
-      #  - echo "From D8_Core_Update"
+      env: TRAVIS_EVENT_TYPE=cron
+        - echo "From D8_Core_Update"
 
     - stage: deploy
       script: ./deploy
