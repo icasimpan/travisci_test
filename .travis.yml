@@ -1,17 +1,4 @@
-jobs:
-  include:
-    - stage: test
-      script: ./test 1
-    - # stage name not required, will continue to use `test`
-      script: ./test 2
-
-    - stage: D8_Core_Update
-      if: branch = master
-        - echo "test: core update"
-      #env: TRAVIS_EVENT_TYPE=cron
-      #  - echo "From D8_Core_Update"
-
-    - stage: pre-deploy
-      script: ./deploy 0
-    - stage: deploy
-      script: ./deploy 1
+install:
+   - python3 -m install pip3
+   - curl -O https://bootstrap.pypa.io/get-pip.py
+   - python3 get-pip.py
