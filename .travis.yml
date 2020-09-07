@@ -1,11 +1,16 @@
-dist: bionic
-language: minimal
+sudo: true
+dist: "bionic" # otherwise 'python3-pip' won't be available
+language: "node_js"
+addons:
+  apt:
+    packages:
+      - "python3"
+      - "python3-pip"
 
 before_install:
-  - curl -o jq -OL https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64; chmod +x jq
-  - git clone https://github.com/alexkli/github-api-scripts
+  - "pip install --upgrade pip"
 
 install:
-  - pwd
-  - ls -l
-  - ls -l github-api-scripts
+  #- "python -m pip install --upgrade pip setuptools wheel"
+  - "python -m pip install --upgrade pip wheel"
+  - "pip3 install git-pull-request"
