@@ -5,7 +5,7 @@ script:
   - pwd
   - cd ..
   - pwd
-  - git clone https://github.com/icasimpan/travisci_test.git modified_code
+  - git clone https://${GH_TOKEN}@github.com/icasimpan/travisci_test.git modified_code
   - cd modified_code
   - git fetch
   - git checkout modified_code
