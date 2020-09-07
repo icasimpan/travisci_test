@@ -3,8 +3,10 @@ language: minimal
 
 script:
   - pwd
-  - git clone https://github.com/icasimpan/travisci_test.git
-  - cd travisci_test
+  - cd ..
+  - pwd
+  - git clone https://github.com/icasimpan/travisci_test.git modified_code
+  - cd modified_code
   - git fetch
   - git checkout modified_code
   - git pull
@@ -12,4 +14,6 @@ script:
   - git add travisci_test/.travis.yml
   - git commit -m"Updating modified_code"
   - git push -u origin modified_code
+  - pwd
+  - cd ../travisci_test
   - ./run-pr.sh
