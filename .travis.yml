@@ -10,8 +10,8 @@ script:
   - git fetch
   - git checkout modified_code
   - git pull
-  - echo '#test removal' > travisci_test/.travis.yml
-  - git add travisci_test/.travis.yml
+  - echo '#test removal' > .travis.yml
+  - git add .travis.yml
   - git commit -m"Updating modified_code"
   - git push -u origin modified_code
   - pwd
