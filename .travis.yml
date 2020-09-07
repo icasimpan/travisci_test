@@ -1,15 +1,5 @@
-jobs:
-  include:
-    - stage: test
-      script: ./test 1
-    - # stage name not required, will continue to use `test`
-      script: ./test 2
+dist: bionic
+language: minimal
 
-    - stage: D8_Core_Update
-      if: branch = update
-        - echo "test: core update"
-      env: TRAVIS_EVENT_TYPE=cron
-        - echo "From D8_Core_Update"
-
-    - stage: deploy
-      script: ./deploy
+script:
+  - curl -X POST -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/icasimpan/travisci_test/pulls -d '{"title":"testing1","head":"modified_code","base":"master"}'
