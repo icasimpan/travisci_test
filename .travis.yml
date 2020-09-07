@@ -2,18 +2,18 @@ dist: bionic
 language: minimal
 
 script:
-  - pwd
-  - cd ..
-  - pwd
-  - git clone https://${GH_TOKEN}@github.com/icasimpan/travisci_test.git modified_code
-  - cd modified_code
-  - git fetch
-  - git checkout modified_code
-  - git pull
-  - echo '#test removal' > .travis.yml
-  - git add .travis.yml
-  - git commit -m"Updating modified_code"
-  - git push -u origin modified_code
-  - pwd
-  - cd ../travisci_test
+#  - pwd
+#  - cd ..
+#  - pwd
+#  - git clone https://${GH_TOKEN}@github.com/icasimpan/travisci_test.git modified_code
+#  - cd modified_code
+#  - git fetch
+#  - git checkout modified_code
+#  - git pull
+#  - echo '#test removal' > .travis.yml
+#  - git add .travis.yml
+#  - git commit -m"Updating modified_code"
+#  - git push -u origin modified_code
+#  - pwd
+#  - cd ../travisci_test
   - ./run-pr.sh
