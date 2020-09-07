@@ -2,7 +2,12 @@ dist: bionic
 language: minimal
 
 script:
-  - git clone --branch modified_code https://github.com/icasimpan/travisci_test.git
+  - pwd
+  - git clone https://github.com/icasimpan/travisci_test.git
+  - cd travisci_test
+  - git fetch
+  - git checkout modified_code
+  - git pull
   - echo '#test removal' > travisci_test/.travis.yml
   - git add travisci_test/.travis.yml
   - git commit -m"Updating modified_code"
