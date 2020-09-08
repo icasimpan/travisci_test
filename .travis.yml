@@ -1,16 +1,1 @@
-sudo: true
-dist: "bionic" # otherwise 'python3-pip' won't be available
-language: "node_js"
-addons:
-  apt:
-    packages:
-      - "python3"
-      - "python3-pip"
-
-before_install:
-  - "pip install --upgrade pip"
-
-install:
-  #- "python -m pip install --upgrade pip setuptools wheel"
-  - "python -m pip install --upgrade pip wheel"
-  - "pip3 install git-pull-request"
+#test removal
