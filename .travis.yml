@@ -3,5 +3,4 @@ dist: bionic
 language: minimal
 
 script:
-  - echo "Test if cron runs"
-#    if: type(TRAVIS_EVENT_TYPE) = cron
+  - ./test.sh
