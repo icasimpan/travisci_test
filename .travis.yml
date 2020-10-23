@@ -3,4 +3,4 @@ dist: bionic
 language: minimal
 
 script:
-  - ./test.sh
+  - ./test
