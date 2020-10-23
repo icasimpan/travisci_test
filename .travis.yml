@@ -3,7 +3,5 @@ dist: bionic
 language: minimal
 
 script:
-  ## NOTE: Travis cron only run once daily. To debug, temporarily add '--local' to 'fin drupal-coreupdate'.
-  ##       Concatenating 3 commands below seems to fail silently since Drupal 8.9.6. Same issue with 8.9.7.
   - echo "Test if cron runs"
 #    if: type(TRAVIS_EVENT_TYPE) = cron
