@@ -1,3 +1,7 @@
 #!/bin/bash
 
-echo "test $*"
+if [[ "$TRAVIS_EVENT_TYPE" = "cron" ]]; then
+  echo "[debug] Run from cron"
+else
+  echo "[debug] No, NOT from cron"
+fi
